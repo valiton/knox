@@ -3,16 +3,15 @@
  * Module dependencies.
  */
 
-var knox = require('..')
-  , utils = knox.utils
-  , assert = require('assert');
+var knox = require('knox')
+  , utils = knox.utils;
 
-describe('knox.utils', function () {
-  specify('.base64.encode()', function () {
+module.exports = {
+  'test .base64.encode()': function(assert){
     assert.equal('aGV5', utils.base64.encode('hey'));
-  });
-
-  specify('.base64.decode()', function () {
+  },
+  
+  'test .base64.decode()': function(assert){
     assert.equal('hey', utils.base64.decode('aGV5'));
-  });
-});
+  }
+};
